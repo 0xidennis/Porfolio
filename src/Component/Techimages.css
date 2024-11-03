@@ -1,0 +1,129 @@
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 60px;
+    padding: 20px 0;
+    background-color: white; 
+    
+   
+  }
+  @media (max-width: 1200px) {
+    .carousel-container{
+      gap: 40px;
+    padding: 15px 0;
+    max-height: calc(5 * 80px + 4 * 10px);
+    
+    }
+  }
+
+  @media (max-width: 768px) {
+    .carousel-container{
+      gap: 30px;
+    padding: 10px 0;
+    flex-direction: row;
+    max-height: calc(5 * 80px + 4 * 10px);
+    }
+  }
+
+  @media (max-width: 480px) {
+   .carousel-container{
+    gap: 20px;
+    padding: 5px 0;
+    flex-direction: row;
+    max-height: calc(5 * 80px + 4 * 10px);
+   }
+  }
+  
+  
+
+  
+  /* Basic styles for each row */
+  .carousel-row {
+    display: flex;
+    gap: 90px;
+    align-items: center;
+    justify-content: center;
+
+  }
+  @media (max-width: 1200px) {
+    .carousel-row{
+      gap: 60px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .carousel-row{
+      gap: 40px;
+      display: flex;
+      flex-direction: column;
+      max-height: calc(5 * 80px + 4 * 10px);
+    }
+  }
+
+  @media (max-width: 480px) {
+   .carousel-row{
+    flex-direction: column;
+    gap: 20px;
+    display: flex;
+    max-height: calc(5 * 80px + 4 * 10px);
+   }
+  }
+  
+  .carousel-image {
+    width: 80px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 8px;
+    
+   
+  }
+  @media (max-width: 1200px) {
+    .carousel-image{
+      width: 70px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .carousel-image{
+      width: 40px;
+    }
+  }
+
+  @media (max-width: 480px) {
+   .carousel-image{
+    width: 30px;
+   }
+  }
+  
+  /* Left-to-right animation */
+  .left-to-right {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px); 
+    }
+  }
+  
+  
+  /* Right-to-left animation */
+  .right-to-left {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px); 
+    }
+  }
+  
+  

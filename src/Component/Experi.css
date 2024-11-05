@@ -1,0 +1,75 @@
+.container-ex{
+    /* border: 1px solid black; */
+    width:1000px ;
+    margin-left: 150px;
+}
+
+
+@media (max-width: 480px) {
+    .container-ex{
+        width: 90%;
+        margin-left: 50px;
+        align-items: center;
+        
+    }
+}
+
+.experien h1{
+    font-size: 40px;
+}
+@media (max-width: 480px) {
+    .experien h1{
+        font-size: 18px;
+        text-align: center;
+    }
+}
+.exper-h{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.exper-h h3{
+   font-size: 35px;
+   color: #666666;
+}
+@media (max-width: 480px) {
+    .exper-h h3{
+        font-size: 16px;
+    }
+}
+
+.exper-h p{
+    background-color: rgb(144, 253, 217);
+   font-size: 16px;
+   color: green;
+   border-radius: 10px;
+   height: 30px;
+   width: 120px;
+   align-items: center;
+   margin-top: 45px;
+
+
+}
+@media (max-width: 480px) {
+    .exper-h p{
+        font-size: 14px;
+        width: 90px;
+        height: 20px;
+        margin-top: 20px;
+
+    }
+}
+.location span{
+    font-size: 16px;
+    color: #666666;
+    margin-left: 10px;
+}
+.location img{
+    margin-left: 8px;
+    width: 20px;
+}
+.last{
+    /* border: 1px solid black; */
+    padding-left: 48%;
+}

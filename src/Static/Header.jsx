@@ -5,58 +5,65 @@ import Twitter from '../assets/Twitter.png'
 import { IoReorderTwoOutline } from "react-icons/io5";
 import { useState } from 'react';
 import Sidebar from "./Sidebar";
+import {Link} from 'react-router-dom'
 
 
 const Header = () => {
-    const [toggle, setToggle] = useState(false)
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-    const handleToggle = () => {
-        setToggle(!toggle)
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
     }
-
-    console.log(toggle);
   return (
     <div>
     <Container>
         <LogNav>
-            <Logo>
+            
                 <img src="./PRINCEWILL fav.png" alt="" width={35} />
-            </Logo>
+            
             <Navigation>
+              <Link to="/">
                 <nav>
                 Home
                 </nav>
+                </Link>
+                <Link to="About">
                 <nav>
                 About
                 </nav>
+                </Link>
+                <Link to="Mytech">
                 <nav>
                 Tech stack
                 </nav>
+                </Link>
+                <Link to="Myproject">
                 <nav>
                 Projects
                 </nav>
+                </Link>
+                <Link to="Contact">
                 <nav>
                 Contact
                 </nav>
+                </Link>
             </Navigation>
             <ImageBox>
             <img src={github} alt="" width={36}/>
-        </ImageBox>
-        <ImageBox>
+            <img src={linkedin} alt="" width={36}/>
             <img src={Twitter} alt="" width={36}/>
         </ImageBox>
-        <ImageBox>
-            <img src={linkedin} alt="" width={36}/>
-        </ImageBox>
-        </LogNav>
         <Buttons>
                 
-                <SideNav onClick={handleToggle}>
+                <SideNav onClick={toggleSidebar}>
                     <IoReorderTwoOutline />
+                    <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
                 </SideNav>
             </Buttons>
+        </LogNav>
+       
     </Container>
-    {toggle === false ? null : <Sidebar toggle={toggle} setToggle={setToggle} />}
+    {/* {toggle === false ? null : <Sidebar toggle={toggle} setToggle={setToggle} />} */}
     </div>
   )
 }
@@ -65,107 +72,83 @@ export default Header
 
 
 const Container = styled.div`
-/* border:1px solid black; */
-width:1600px;
-align-items:center;
-justify-content:space-between;
-margin-left:150px;
-margin-top:20px;
-@media (max-width: 1200px) {
-    width: 100%;
-    margin-left: 0;
-    align-items:center;
-    justify-content:center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #ffff;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+`;
+
+// Flex container for the items in the navbar
+const LogNav = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+`;
+
+// Logo styling
+const Logo = styled.img`
+  width: 35px;
+  cursor: pointer;
+`;
+
+
+const Navigation = styled.nav`
+  display: flex;
+  gap: 50px;
+  
+  a {
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   @media (max-width: 768px) {
-    margin-top: 10px;
-    align-items:center;
+    display: none; 
   }
+`;
 
-`
-
-const LogNav = styled.div`
-display:flex;
-justify-content:space-between;
-align-items:center;
-cursor: pointer;
-/* border: 1px solid black; */
-
-@media (max-width: 768px) {
-    /* flex-direction: column; */
-    align-items: flex-start;
-    align-items: center;
-  }
-
-
-
-
-`
-const Logo = styled.div`
-align-items:center;
-@media (max-width: 768px) {
-    margin-bottom: -90px;
-    margin-left:20px;
-  }
-
-
-`
-const Navigation = styled.div`
-display: flex;
-align-items:center;
-gap: 30px;
-margin-right:100px;
-cursor: pointer;
-font-size:20px;
-
-@media (max-width: 768px) {
-    font-size: 16px;
-    gap: 20px;
-    margin-right: 0;
-    display:none;
-  }
-`
 
 const ImageBox = styled.div`
-gap:-40px;
-justify-content:space-around;
-margin-left:-800px;
-cursor: pointer;
-img{
-    margin-left:0px;
-}
-@media (max-width: 768px) {
-    margin-left: 0;
-    gap: 10px;
-    display: none;
+  display: flex;
+  gap: 15px;
+  margin-right:-300px;
+
+  img {
+    width: 36px;
+    cursor: pointer;
   }
 
-
-
-
-`
-const SideNav = styled.div`
-display: none;
-font-size: 30px;
-margin-left: -30px;
-@media (max-width: 768px) {
-    display: block;
-    font-size: 24px;
-    margin-left: 300px;
-    margin-top:28px;
+  @media (max-width: 768px) {
+    display: none; 
   }
+`;
 
-
-`
+// Hamburger button styling
 const Buttons = styled.div`
-display: flex;
-align-items: center;
+  display: flex;
+  align-items: center;
+`;
 
-@media (max-width: 768px) {
-    flex-direction: column;
-    gap: 10px;
+// Hamburger icon styling
+const SideNav = styled.div`
+  display: none;
+  color: black;
+  font-size: 2rem;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    display: block; 
   }
+`;
 
-
-`

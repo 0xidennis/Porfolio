@@ -29,7 +29,7 @@ const Footer = () => {
        
     </Container>
 
-    <hr width={1700}/>
+    {/* <hr width={1700}/> */}
     <Container>
         <LogNav>
             <Navigation>

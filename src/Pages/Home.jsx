@@ -1,12 +1,17 @@
 
 import Hero from '../Component/Hero'
-import Header from '../Static/Header'
+import Project from '../Component/Project'
+// import Header from '../Static/Header'
+
+// import Footer from './Static/Footer'
+import Techstack from '../Pages/Techstack'
 
 const Home = () => {
   return (
     <>
-    <Header/>
     <Hero/>
+    <Techstack/>
+     <Project/>
     </>
   )
 }

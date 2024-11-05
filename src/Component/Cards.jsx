@@ -1,30 +1,74 @@
+import styled from 'styled-components';
+import { animated } from 'react-spring';
 
-
-const Cards = (Props) => {
+const Cards = ({ img, title, par, sub, im, footer, image, foot, style }) => {
   return (
-    <div>
-     <div className={`car ${Props.car}`}>
-      <img src={Props.img} alt="" className={`card-img ${Props.cardimg}`}/>
-      <h1 className={`card-header ${Props.cardheader}`}>{Props.title}</h1>
-      <p className={`card-para ${Props.cardpara}`}>{Props.par}</p>
-      <p className={`card-sub ${Props.cardsub}`}>{Props.sub}</p>
-      <div className={`cart ${Props.cart}`}>
-        <p><img src={Props.im} alt="" />{Props.footer}</p>
-        <p><img src={Props.image} alt="" width={25} />{Props.foot}</p>
-      </div>
-     </div>
-     {/* <div className={`car ${Props.down}`}>
-      <img src={Props.imge} alt="" className={`card-img ${Props.caimg}`}/>
-      <h1 className={`card-header ${Props.cardheader}`}>{Props.titl}</h1>
-      <p className={`card-para ${Props.cardpara}`}>{Props.parg}</p>
-      <p className={`card-sub ${Props.cardsub}`}>{Props.subs}</p>
-      <div className={`cart ${Props.cart}`}>
-        <p><img src={Props.ime} alt="" />{Props.foote}</p>
-        <p><img src={Props.imag} alt="" width={25} />{Props.footr}</p>
-      </div>
-     </div> */}
-    </div>
+    <CardContainer style={style}>
+      <Image src={img} alt="Card Image" />
+      <Header>{title}</Header>
+      <Paragraph>{par}</Paragraph>
+      <SubText>{sub}</SubText>
+      <Footer>
+        <p><img src={im} alt="Footer Icon" width={25} /> {footer}</p>
+        <p><img src={image} alt="Footer Icon" width={25} /> {foot}</p>
+      </Footer>
+    </CardContainer>
   )
 }
 
 export default Cards
+
+const CardContainer = styled(animated.div)`
+  width: 100%;
+  max-width: 300px;
+  margin: 15px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-out;
+  cursor: pointer;
+  opacity: 0; /* Start with opacity 0 for pop-up animation */
+
+  &:hover {
+    transform: translateY(-10px); /* Hover animation */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
+`;
+
+const Image = styled.img`
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+`;
+
+const Header = styled.h1`
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+`;
+
+const Paragraph = styled.p`
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #555;
+`;
+
+const SubText = styled.p`
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  color: #777;
+`;
+
+const Footer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #333;
+`;

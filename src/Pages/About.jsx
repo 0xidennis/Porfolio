@@ -20,7 +20,7 @@ During my internship at Digiplus Connect, I honed my skills in real-world projec
 
 I am passionate about continuous learning and always open to opportunities that allow me to grow as a developer and contribute to innovative projects.
   </p>
-  <h1 className={`header ${animate ? 'animate' : ''}`}>
+  <h1 className={`head ${animate ? 'animate' : ''}`}>
     <Experi/>
   </h1>
   

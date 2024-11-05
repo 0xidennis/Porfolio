@@ -27,7 +27,13 @@ const Container = styled.div`
 width:1600px;
 /* border: 1px solid black; */
 margin-left: 8%;
-margin-top: 5%;
+margin-top: 1%;
+min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #ffff;
 
 @media (max-width: 1200px) {
     width: 90%;
@@ -52,15 +58,20 @@ const Wrapper = styled.div`
 display: flex;
 align-items:center;
 justify-content:space-between;
+flex-direction: row;
+  max-width: 1200px;
+  width: 100%;
+  gap: 100px;
 
 @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
+    gap: 20px;
   }
 
 `
 const TextBox = styled.div`
- font-size: 2rem;
+ font-size: 1.7rem;
   color: black;
   opacity: 0;
   transform: scale(0.8);
@@ -96,13 +107,14 @@ span{
   }
 `
 const ImageBox =styled.div`
-border-radius:800px;
-border:8px solid #00C0FD;
+border-radius:1800px;
+border:8px solid ;
 width: 500px;
   height: auto;
   animation: float 3s ease-in-out infinite;
+  border-image: linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff) 1;
 img{
-    border-radius:inherit;
+    border-radius:800px;
     width:inherit;
 }
 

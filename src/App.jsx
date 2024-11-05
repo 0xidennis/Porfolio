@@ -1,21 +1,30 @@
 
-
+import Header from './Static/Header'
 import './App.css'
-import Project from './Component/Project'
 import About from './Pages/About'
 import Home from './Pages/Home'
-import Techstack from './Pages/Techstack'
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import Myproject from './Pages/Myproject'
+import Mytech from './Pages/Mytech'
+import Contact from './Pages/Contact'
 import Footer from './Static/Footer'
 
 function App() {
 
   return (
     <>
-    {/* <About/> */}
-     <Home/>
-     <Techstack/>
-     <Project/>
-     <Footer/>
+      <BrowserRouter>
+         <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/About" element={<About />} />
+            <Route path="/Mytech" element={<Mytech/>} />
+            <Route path="/Myproject" element={<Myproject/>} />
+            <Route path="/Contact" element={<Contact/>} />
+          </Routes>
+        <Footer/>
+      </BrowserRouter>
+     
     </>
   )
 }

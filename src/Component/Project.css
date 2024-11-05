@@ -68,7 +68,9 @@
     gap: 5px;
     justify-content: space-around;
     
+    
   }
+ 
   @media (max-width: 768px) {
     .card-d{
       flex: 1 1 calc(50% - 10px); 
@@ -84,12 +86,36 @@
 
   .car{
     /* border: 1px solid black; */
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+
+    gap: 20px;
+    justify-content: center;
+    height: 600px;
+   
     width: 60.48%;
     align-items: center;
     margin-left: 10rem;
-    gap: 40px;
+    gap: 5px;
     border-radius: 30px;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease forwards;
+    transition: transform 0.3s ease-out;
+    margin-bottom: 16px; /* Space between rows */
+    margin-right: -70px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  }
+  .car:hover {
+    transform: scale(1.05); /* slightly scales up the card */
+  }
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(10);
+    }
   }
   @media (max-width: 768px) {
     .car{

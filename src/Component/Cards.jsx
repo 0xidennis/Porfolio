@@ -26,12 +26,14 @@ const CardContainer = styled(animated.div)`
   background-color: white;
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
   cursor: pointer;
+  transform: translateY(50px);
+  animation: fadeInUp 1s ease forwards;
   opacity: 0; /* Start with opacity 0 for pop-up animation */
 
   &:hover {
-    transform: translateY(-10px); /* Hover animation */
+    transform: scale(1.05); /* Hover animation */
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
   }
 
@@ -71,4 +73,11 @@ const Footer = styled.div`
   align-items: center;
   font-size: 0.9rem;
   color: #333;
+  img{
+    width: 15px;
+  }
+  p{
+    text-decoration:none;
+    text-decoration-line:none;
+  }
 `;

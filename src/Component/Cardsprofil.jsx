@@ -1,8 +1,11 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
 import { useSpring, useTrail, animated } from 'react-spring';
+// import {chain} from '../assets/chain.png'
+// import git from '../assets/github.png'
 import styled from 'styled-components';
 import Cards from './Cards';
+import {Link} from 'react-router-dom'
 
 const CardListContainer = styled.div`
   display: flex;
@@ -14,12 +17,12 @@ const CardListContainer = styled.div`
 
 // Sample data for the cards
 const cardData = [
-  { img: 'image1.jpg', title: 'Card 1', par: 'Description 1', sub: 'Subtext 1', im: 'icon1.png', footer: 'Link 1', image: 'icon2.png', foot: 'Link 2' },
-  { img: 'image2.jpg', title: 'Card 2', par: 'Description 2', sub: 'Subtext 2', im: 'icon1.png', footer: 'Link 1', image: 'icon2.png', foot: 'Link 2' },
-  { img: 'image3.jpg', title: 'Card 3', par: 'Description 3', sub: 'Subtext 3', im: 'icon1.png', footer: 'Link 1', image: 'icon2.png', foot: 'Link 2' },
-  { img: 'image4.jpg', title: 'Card 4', par: 'Description 4', sub: 'Subtext 4', im: 'icon1.png', footer: 'Link 1', image: 'icon2.png', foot: 'Link 2' },
-  { img: 'image5.jpg', title: 'Card 5', par: 'Description 5', sub: 'Subtext 5', im: 'icon1.png', footer: 'Link 1', image: 'icon2.png', foot: 'Link 2' },
-  { img: 'image6.jpg', title: 'Card 6', par: 'Description 6', sub: 'Subtext 6', im: 'icon1.png', footer: 'Link 1', image: 'icon2.png', foot: 'Link 2' },
+  { img: "./will.png", title: 'princewill fashion', par: 'e-commerce', sub: 'Tech stack : HTML ,css, JavaScript', im:"./chain.png",footer: <Link>view</Link>, image: './github-fill.png', foot: <Link to='https://github.com/0xidennis/Princewill'>github</Link> },
+  { img: "./digi.png", title: 'Digiplus connect', par: 'e-commerce', sub: 'Tech stack: HTML ,css, JavaScript,react,bootstrap,anime,tailwind', im: './chain.png', footer: <Link>view</Link>, image: './github-fill.png', foot: <Link to='https://github.com/Digiplus-connect-cafe/DIGIPLUS-CONNECT-CAFE-WEBSITE'>github</Link> },
+  { img: './TEEspace.png', title: 'TEESPACE', par: 'e-commerce', sub: 'Tech stack : HTML ,css, JavaScript,boostrap', im: './chain.png', footer: <Link>view</Link>, image: './github-fill.png', foot: <Link to='https://github.com/abifol/E-COMMERCE-APP'>github</Link> },
+  { img: './Dwolla.png', title: 'Dwolla', par: 'Portfolio', sub: 'Tech stack : HTML ,css, JavaScript,boostrap,', im: './chain.png', footer: <Link to='https://0xidennis.github.io/dwollar/'>view</Link>, image: './github-fill.png', foot: <Link to='https://github.com/0xidennis/dwollar'>github</Link> },
+  { img: './dev.png', title: 'Portfolio', par: 'cv', sub: 'Tech stack : HTML ,css, JavaScript,react,boostrap', im: './chain.png', footer: <Link to='https://0xidennis.github.io/ify_resume/'>view</Link>, image: './github-fill.png', foot: <Link to='https://github.com/0xidennis/ify_resume'>github</Link> },
+  { img: './Nexcent.png', title: 'Nexcent', par: 'Education', sub: 'Tech stack : HTML ,css, JavaScript,boostrap', im: './chain.png', footer: <Link to='https://0xidennis.github.io/nexcent/'>view</Link>, image: './github-fill.png', foot: <Link to='https://github.com/0xidennis/nexcent'>github</Link> },
 ];
 
 const Cardsprofil = () => {

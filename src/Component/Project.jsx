@@ -2,8 +2,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import './Project.css'
 import Cards from './Cards';
 import Proj from '../assets/proj.png'
-import chain from '../assets/chain.png'
-import git from '../assets/github.png'
+// import chain from '../assets/chain.png'
+// import git from '../assets/github.png'
 import Cardsprofil from './Cardsprofil';
 
 const Project = () => {

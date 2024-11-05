@@ -9,29 +9,24 @@ const Footer = () => {
       <div>
       <Container>
         <LogNav>
-            <Logo>
-                <img src="./PRINCEWILL fav.png" alt="" width={35} />
-            </Logo>
             <TextBox>
               <p>+2349034340791</p>
               <p>meneweifeanyi@gmail.com</p>
             </TextBox>
             <ImageBox>
             <img src={github} alt="" width={36}/>
-        </ImageBox>
-        <ImageBox>
+            <img src={linkedin} alt="" width={36}/>
             <img src={Twitter} alt="" width={36}/>
         </ImageBox>
-        <ImageBox>
-            <img src={linkedin} alt="" width={36}/>
-        </ImageBox>
         </LogNav>
+        <hr/>
        
     </Container>
 
-    {/* <hr width={1700}/> */}
+    
     <Container>
         <LogNav>
+       
             <Navigation>
                 <nav>
                 Home
@@ -68,6 +63,10 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom:-30px;
+  hr{
+  width: 100%;
+  }
 
   @media (max-width: 768px) {
     padding: 15px;
@@ -94,21 +93,11 @@ display: flex;
 
 
 `
-
-const Logo = styled.div`
-display: flex;
-  align-items: center;
-
-  img {
-    width: 35px;
-  }
-
-
-`
 const Navigation = styled.div`
  display: flex;
+ margin-left:30%;
   gap: 30px;
-  margin-top: 20px;
+  margin-top: 10px;
   font-size: 1.2rem;
 
   nav {
@@ -119,6 +108,8 @@ const Navigation = styled.div`
     gap: 20px;
     font-size: 1rem;
     margin-top: 15px;
+    margin-left:5%;
+    border:1px solid black;
   }
 
   @media (max-width: 480px) {
@@ -134,14 +125,16 @@ const ImageBox = styled.div`
   display: flex;
   align-items: center;
   cursor: pointer;
-  gap: 15px;
+  gap: 30px;
 
   img {
-    width: 36px;
+    width: 35px;
+   
   }
 
   @media (max-width: 768px) {
     gap: 10px;
+    display:flex;
   }
 
   @media (max-width: 480px) {
@@ -154,12 +147,11 @@ const ImageBox = styled.div`
 `
 const TextBox = styled.div`
  display: flex;
-  flex-direction: column;
   align-items: center;
   font-size: 1rem;
 
   p {
-    margin: 0;
+    margin: 45px;
   }
 
   @media (max-width: 768px) {

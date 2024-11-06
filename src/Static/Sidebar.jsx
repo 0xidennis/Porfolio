@@ -41,8 +41,8 @@ const SidebarContainer = styled.div`
   right: 0;
   height: 100vh;
   width: 250px;
-  background-color: #333;
-  color: white;
+  background-color: #ffff;
+  color: #020101;
   transform: ${({ isOpen }) => (isOpen ? 'translateX(0)' : 'translateX(100%)')};
   transition: transform 0.3s ease-in-out;
   display: flex;
@@ -58,5 +58,9 @@ const SidebarContainer = styled.div`
     font-size:20px;
     color:white;
     text-decoration:none;
+    a{
+      text-decoration:none;
+      color: black;
+    }
   }
 `; 

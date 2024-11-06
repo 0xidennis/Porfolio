@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import preview from '../assets/preview.png'
+
 const Hero = () => {
   return (
     <div>
@@ -24,9 +25,8 @@ const Hero = () => {
 export default Hero
 
 const Container = styled.div`
-width:1600px;
-/* border: 1px solid black; */
-margin-left: 8%;
+width:100%;
+margin-right: 100%;
 margin-top: 1%;
 min-height: 100vh;
   display: flex;
@@ -61,6 +61,7 @@ justify-content:space-between;
 flex-direction: row;
   max-width: 1200px;
   width: 100%;
+  margin-right:20%;
   gap: 100px;
 
 @media (max-width: 768px) {

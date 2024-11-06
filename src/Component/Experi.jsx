@@ -50,7 +50,7 @@ const Experi = () => {
         </div>
         <div className='exper-h'>
             <h3>Physics with electronics</h3>
-            <p></p>
+            <p>ND/HND</p>
         </div>
         <div className='location'>
           <img src={building} alt="" /><span>Lagos state polytechnic</span>

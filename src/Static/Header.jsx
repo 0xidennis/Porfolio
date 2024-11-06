@@ -49,9 +49,9 @@ const Header = () => {
                 </Link>
             </Navigation>
             <ImageBox>
-            <img src={github} alt="" width={36}/>
-            <img src={linkedin} alt="" width={36}/>
-            <img src={Twitter} alt="" width={36}/>
+            <Link to='https://github.com/dashboard'><img src={github} alt="" width={36}/></Link>
+            <Link to='https://www.linkedin.com/in/menewe-ifeanyi/'><img src={linkedin} alt="" width={36}/></Link>
+           <Link to='https://twitter.com/0xdenn1s'> <img src={Twitter} alt="" width={36}/></Link>
         </ImageBox>
         <Buttons>
                 

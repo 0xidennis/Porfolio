@@ -7,12 +7,12 @@ const Footer = () => {
   return (
     <div>
       <div>
-      {/* <Container>
+      <Container>
         <LogNav>
-            <TextBox>
+            {/* <TextBox>
               <p>+2349034340791</p>
               <p>meneweifeanyi@gmail.com</p>
-            </TextBox>
+            </TextBox> */}
             <ImageBox>
             <img src={github} alt="" width={36}/>
             <img src={linkedin} alt="" width={36}/>
@@ -21,7 +21,7 @@ const Footer = () => {
         </LogNav>
         <hr/>
        
-    </Container> */}
+    </Container>
 
     
     <Container>
@@ -70,7 +70,6 @@ const Container = styled.div`
 
   @media (max-width: 768px) {
     padding: 0px;
-    border:1px solid black;
     width:80%;
   }
 
@@ -89,7 +88,7 @@ display: flex;
 
   @media (max-width: 768px) {
     flex-direction: column;
-    gap: 10px;
+    gap: 3px;
   }
 
 
@@ -107,15 +106,15 @@ const Navigation = styled.div`
   }
 
   @media (max-width: 768px) {
-    gap: 20px;
+    gap: 1px;
     font-size: 1rem;
     margin-top: 15px;
-    margin-left:5%;
-    border:1px solid black;
+    margin-left:1%;
+    /* border:1px solid black; */
   }
 
   @media (max-width: 480px) {
-    gap: 15px;
+    gap: 10px;
     font-size: 0.9rem;
     flex-wrap: wrap;
     justify-content: center;

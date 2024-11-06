@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <div>
       <div>
-      <Container>
+      {/* <Container>
         <LogNav>
             <TextBox>
               <p>+2349034340791</p>
@@ -21,7 +21,7 @@ const Footer = () => {
         </LogNav>
         <hr/>
        
-    </Container>
+    </Container> */}
 
     
     <Container>
@@ -69,7 +69,9 @@ const Container = styled.div`
   }
 
   @media (max-width: 768px) {
-    padding: 15px;
+    padding: 0px;
+    border:1px solid black;
+    width:80%;
   }
 
   @media (max-width: 480px) {
@@ -80,7 +82,7 @@ const Container = styled.div`
 
 const LogNav = styled.div`
 display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
   flex-wrap: wrap;

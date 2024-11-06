@@ -1,14 +1,15 @@
 .container-ex{
     /* border: 1px solid black; */
     width:1000px ;
-    margin-left: 150px;
+    margin-left: 330px;
+    
 }
 
 
 @media (max-width: 480px) {
     .container-ex{
         width: 90%;
-        margin-left: 50px;
+        margin-left: 20px;
         align-items: center;
         
     }

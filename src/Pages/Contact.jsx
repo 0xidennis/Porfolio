@@ -1,11 +1,11 @@
 import React from 'react'
-
+import './contact.css'
 const Contact = () => {
   return (
     <div>
       <div>
-      For any questions please mail us:
-      hi@pavanmg.in
+      <h1>For any questions please mail <us:span>meneweifeanyi@gmail.com</us:span>
+      </h1>
       </div>
     </div>
   )

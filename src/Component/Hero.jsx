@@ -37,19 +37,19 @@ min-height: 100vh;
 
 @media (max-width: 1200px) {
     width: 90%;
-    margin-left: 5%;
-    margin-top:6%;
+    margin-left: 7%;
+    margin-top:4%;
   }
 
   @media (max-width: 768px) {
     width: 100%;
-    margin-left: 0;
+    margin-left: 20%;
     margin-top: 10%;
   }
 
   @media (max-width: 480px) {
     width: 100%;
-    margin-left: 0;
+    margin-left: 20%;
     margin-top: 10%;
   }
 

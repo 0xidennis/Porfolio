@@ -35,6 +35,7 @@
     padding: 5px 0;
     flex-direction: row;
     max-height: calc(5 * 80px + 4 * 10px);
+    margin-left: 10%;
    }
   }
   

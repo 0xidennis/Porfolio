@@ -39,8 +39,9 @@ const CardContainer = styled(animated.div)`
 
   @media (max-width: 768px) {
     max-width: 100%;
+    margin-left:0%;
   }
-`;
+`
 
 const Image = styled.img`
   width: 100%;

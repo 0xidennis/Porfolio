@@ -88,13 +88,14 @@ const LogNav = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 100%;
+  margin-left:5%;
+
 `;
 
 // Logo styling
 const Logo = styled.img`
-  width: 35px;
+  width: 10%;
   cursor: pointer;
 `;
 
@@ -121,8 +122,8 @@ const Navigation = styled.nav`
 
 const ImageBox = styled.div`
   display: flex;
-  gap: 15px;
-  margin-right:-300px;
+  gap: 40px;
+  margin-right:2rem;
 
   img {
     width: 36px;

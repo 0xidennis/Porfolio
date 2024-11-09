@@ -45,6 +45,7 @@ min-height: 100vh;
     width: 100%;
     margin-left: 20%;
     margin-top: 10%;
+    margin-right:20%;
   }
 
   @media (max-width: 480px) {

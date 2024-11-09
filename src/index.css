@@ -12,7 +12,8 @@
 }
 
 body {
-  width: 78%;
+  width: 72%;
   margin: 0px;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
